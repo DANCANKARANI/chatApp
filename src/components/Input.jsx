@@ -21,6 +21,21 @@ const Input = () => {
   const { currentUser } = useContext(AuthContext);
   const { data } = useContext(ChatContext);
 
+  //fetch api
+  const postData = async (url = '', data = {}) => {
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+  };
+  
+  
+//end
+
   const handleSend = async () => {
     if (img) {
       const storageRef = ref(storage, uuid());
@@ -53,6 +68,12 @@ const Input = () => {
           senderId: currentUser.uid,
           date: Timestamp.now(),
         }),
+        
+      });
+      // Example usage:
+      postData('https://abusive-word-detector.onrender.com/api/v1/message', { text: text })
+      .then(data => {
+        console.log(data); 
       });
     }
 

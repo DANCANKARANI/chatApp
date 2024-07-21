@@ -6,8 +6,9 @@ export const Message = ({ message}) => {
  
   const  {currentUser}=useContext(AuthContext)
   const  {data}=useContext(ChatContext)
-
   const ref=useRef();
+
+  
 
   useEffect(()=>{
     ref.current?.scrollIntoView({behavior:"smooth"})
