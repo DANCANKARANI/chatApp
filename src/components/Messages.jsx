@@ -3,7 +3,7 @@ import { Message } from './Message'
 import { ChatContext } from '../context/ChatContext'
 import { doc, onSnapshot } from 'firebase/firestore'
 import { db } from '../firebase'
-export const Messages = () => {
+const Messages = () => {
   const {data}=useContext(ChatContext)
   const [messages,setMessages]=useState([])
 
@@ -23,3 +23,4 @@ export const Messages = () => {
  </div>
   )
 }
+export default Messages;

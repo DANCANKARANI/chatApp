@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { auth } from '../firebase'
 import { AuthContext } from '../context/AuthContext'
 
-export const Navbar = () => {
+const Navbar = () => {
   const {currentUser}=useContext(AuthContext)
   
   return (
@@ -17,3 +17,4 @@ export const Navbar = () => {
     </div>
   )
 }
+export default Navbar;

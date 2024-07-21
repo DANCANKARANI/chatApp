@@ -11,7 +11,7 @@ function App(){
         <div>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/">
+                    <Route path="/login">
                         <Route index element={<Home/>}/>
                         <Route path="login" element={<Login/>}/>
                         <Route path="register" element={<Register/>}/>
