@@ -281,15 +281,19 @@
                     }
                 }
             }
-            .input{
+            .input {
                 height: 50px;
                 background-color: white;
                 padding: 10px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-
+                border: 1px solid #ccc; /* Optional: Add a border */
+                border-radius: 5px; /* Optional: Add rounded corners */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+              
                 input{
+                    flex: 1;
                     widows: 100%;
                     border: none;
                     outline: none;
